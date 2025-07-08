@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Responsive Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('space')">Space</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" data-category="nature" alt="Nature">
+    <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564" data-category="space" alt="Galaxy">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" data-category="nature" alt="Mountains">
+    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" data-category="space" alt="Stars">
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156" data-category="city" alt="City">
+    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b" data-category="city" alt="Buildings">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" data-category="space" alt="Universe">
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="Preview">
+    <div class="nav">
+      <button onclick="prevImage()">⟨ Prev</button>
+      <button onclick="nextImage()">Next ⟩</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
